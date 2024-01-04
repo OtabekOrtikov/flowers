@@ -1,0 +1,107 @@
+.header {
+    width: 100%;
+    height: auto;
+    &-top {
+        border-bottom: 2px solid $light-grey;
+        padding: 10px 0;
+        background-color: $white;
+        
+        &__nav {
+            @extend %container;
+            @include flex-box(row, space-between, center, wrap);
+
+            &-logo img {
+                max-width: 110px;
+                width: 100%;
+                height: auto;
+            }
+            &-menu {                
+                @include flex-box(row, space-between, center, wrap);
+
+                &-item {
+                    list-style-type: none;
+                    text-transform: uppercase;
+                    margin: 0 25px;
+                    font-weight: 600;
+                    color: $blue;
+                    position: relative;
+                    font-size: 16px;
+
+                    &::before {
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        background-color: $blue;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        transition: all .3s ease-in-out;;
+                        transform: scaleX(0);
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:last-child:hover::before {
+                        transform: scaleX(0);
+                    }
+
+                    &:hover::before {
+                        transform: scaleX(1);
+                    }
+                    &.active-link::before {
+                        transform: scaleX(1);
+                    }
+
+                    .btn-outline-primary {
+                        span {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-container {
+        width: 100%;
+        height: auto;
+        padding: 20vh 0;
+        position: relative;
+
+        &__main {
+            @extend %container;
+
+            &-title {
+                margin-bottom: 20px;
+                font-size: 40px;
+                color: $blue;
+            }
+
+            &-p {
+                font-size: 16px;
+                color: $grey;
+                margin-bottom: 30px;
+            }
+
+        }
+
+        &__bg {
+            top: 0;
+            left: 0;
+            z-index: -1;
+            height: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            position: absolute;
+            img {
+                width: 100%;
+                display: none;
+                filter: grayscale(50%) blur(5px);
+                
+                &#slide-item-3 {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@import 'kit/variables';
+@import 'kit/fonts';
+@import 'kit/mixins';
+@import 'kit/placeholder';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all .3s ease-out;
+    &.btn-primary {
+        @extend %primary-btn;
+    }
+    &.btn-outline-primary {
+        @extend %primary-outline-btn;
+    }
+    &.btn-out-primary {
+        @extend %primary-out-btn;
+    }
+}
+
+@import 'header';
+
+main {
+    @import 'catalog';
+
+    @import 'create-section';
+}
+
+@import 'footer';

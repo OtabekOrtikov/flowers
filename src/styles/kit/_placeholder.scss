@@ -1,0 +1,39 @@
+%primary-outline-btn {
+    border: 2px solid $light-blue;
+    padding: 20px 25px;
+    color: $blue;
+    border-radius: 8px;
+    font-size: 16px;
+
+    &:hover {
+        border-color: $blue;
+    }
+}
+%primary-out-btn {
+    border: 2px solid $light-blue;
+    padding: 20px 25px;
+    color: $blue;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+
+    &:hover {
+        color: $white;
+        border-color: $blue;
+        background-color: $blue;
+    }
+}
+%primary-btn {
+    padding: 10px 15px;
+    color: $white;
+    background-color: $blue;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-weight: 600;
+}
+%container {
+    max-width: 1380px;
+    margin: auto;
+    height: auto;
+    width: 100%;
+}

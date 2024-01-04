@@ -1,0 +1,46 @@
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 5vh 0;
+    &-container {
+        @extend %container;
+        &__nav {
+            @include grid-box(300px 300px 320px, auto, auto, space-between, flex-start);
+
+            &-menu {
+                margin: 0 auto;
+                &-item {
+                    list-style-type: none;
+                    margin-bottom: 15px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $blue;
+                    
+                    a { 
+                        position: relative;
+                        &::before {
+                            content: '';
+                            width: 0;
+                            height: 2px;
+                            background-color: $blue;
+                            bottom: -5px;
+                            left: 0;
+                            position: absolute;
+                            transition: all .3s ease-in;
+                        }
+                        &:hover::before {
+                            width: 100%;
+                        }
+                    }
+                    
+
+                }
+            }
+            &-map {
+                iframe {
+                    border: 1px dashed $blue;
+                }
+            }
+        }
+    }
+}

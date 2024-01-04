@@ -1,0 +1,92 @@
+.create {
+    width: 100%;
+    height: auto;
+    background-color: $blue;
+    padding: 10vh 0;
+    &-container {
+        @extend %container;
+
+        &__title {
+            color: $white;
+            font-size: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+
+            span {
+                text-transform: uppercase;
+                color: $lime;
+            }
+        }
+
+        &-articles {
+            display: grid;
+            grid-template-columns: 300px 300px 300px 300px;
+            justify-content: space-between;
+            gap: 35px;
+
+            &__card {
+                overflow: hidden;
+                max-width: 300px;
+                box-shadow: 0 3px 5px $grey;
+                background-color: $white; 
+                border-radius: 10px;
+                img {
+                    max-width: 300px;
+                    width: 100%;
+                    margin-bottom: 0;
+                    box-shadow: 0 0 5px $light-grey;
+                }
+                &-desc {
+                    padding: 18px 20px;
+                    h4 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: $blue;
+                        margin-bottom: 20px;
+                    }
+                    .card-price {
+                        @include flex-box(row, space-between, center, nowrap);
+
+                        &__cost {
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: $blue;
+                        }
+                        &__btn {
+                            padding: 10px;
+                            background-color: $lime;
+                            color: $white;
+                            border-radius: 10px;
+                            font-size: 18px;
+                            cursor: pointer;
+
+                            @include flex-box(row, flex-end, center, nowrap);
+
+                            &-minus, &-amount, &-plus {
+                                display: none;
+                                margin: 0 2px;
+                            }
+                            &-minus {
+                                margin-right: 5px;
+                            }
+                            &-plus {
+                                margin-left: 5px;
+                            }
+                            &.counting {
+                                padding: 10px 0;
+                                .card-price__btn-basket {
+                                    display: none;
+                                }
+                                .card-price__btn-minus,
+                                .card-price__btn-amount,
+                                .card-price__btn-plus {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
