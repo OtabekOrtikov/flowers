@@ -20,11 +20,11 @@
 
         &-articles {
             display: grid;
-            grid-template-columns: 300px 300px 300px 300px;
+            grid-template-columns: repeat(auto-fill, 300px);
             justify-content: space-between;
             gap: 35px;
 
-            &__card {
+            .flower-card {
                 overflow: hidden;
                 max-width: 300px;
                 box-shadow: 0 3px 5px $grey;
@@ -58,6 +58,11 @@
                     }
                 }
             }
+        }
+
+        &__btn {
+            text-align: center;
+            margin-top: 40px;
         }
     }
 }

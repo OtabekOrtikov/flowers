@@ -1,3 +1,34 @@
+// const header_top = document.querySelector('.header-top');
+// window.addEventListener("scroll", function(){
+//     if ( document.body.scrollTop >= 120 || document.scrollingElement.scrollTop >= 120 || document.documentElement.scrollTop >= 120 ) {
+//         header_top.classList.add("fixed");
+//     } else {
+//         header_top.classList.remove("fixed");
+//     }
+// });
+
+const subMenuBtn = document.querySelectorAll('.has-submenu');
+subMenuBtn.forEach(btn => {
+
+    
+    if (window.screen.width >= 990) {
+        btn.addEventListener('mouseover', () => {
+            btn.classList.add('focused');
+        });
+        btn.addEventListener('mouseout', () => {
+            btn.classList.remove('focused');
+        });
+    } else {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('focused');
+        });
+        btn.addEventListener('mouseout', () => {
+            btn.classList.remove('focused');
+        });
+    }
+
+});
+
 // slide show
 let slideIndex = 0;
 showSlide();
@@ -20,6 +51,7 @@ fetch('json/articles.json')
 .then(response => response.json())
 .then(data => {
     renderArticles(data.articles);
+    renderFlowerArticles(data.flowers);
     addToBasket();
   })
 
@@ -40,8 +72,8 @@ function renderArticles(datas) {
         const plus = document.createElement('span');
         const basket = document.createElement('span');
 
-        article.classList = 'catalog-container__articles-card';
-        div.classList = 'catalog-container__articles-card-desc';
+        article.classList = 'flower-card';
+        div.classList = 'flower-card-desc';
         card_price.classList = 'card-price';
         cost.classList = 'card-price__cost';
         btn.classList = 'card-price__btn';
@@ -52,6 +84,7 @@ function renderArticles(datas) {
 
         img.src = data.image;
         img.alt = data.name;
+        img.loading = 'lazy';
         h4.innerText = data.name;
         cost.innerHTML += `<span id="cost-sum">${data.cost}</span> USB`;
         amount.innerText = 1;
@@ -124,3 +157,66 @@ function addToBasket() {
         });
     });
 }
+
+const flowerContainer = document.querySelector('.create-container-articles');
+
+function renderFlowerArticles(datas) {
+    datas.every(data => {
+        const article = document.createElement('article');
+        const img = document.createElement('img');
+        const div = document.createElement('div');
+        const h4 = document.createElement('h4');
+        const card_price = document.createElement('div');
+        const cost = document.createElement('span');
+        const btn = document.createElement('button')
+        const minus = document.createElement('span');
+        const amount = document.createElement('span');
+        const plus = document.createElement('span');
+        const basket = document.createElement('span');
+
+        article.classList = 'flower-card';
+        div.classList = 'flower-card-desc';
+        card_price.classList = 'card-price';
+        cost.classList = 'card-price__cost';
+        btn.classList = 'card-price__btn';
+        minus.classList = 'icon-minus card-price__btn-minus';
+        amount.classList = 'card-price__btn-amount';
+        plus.classList = 'icon-plus card-price__btn-plus';
+        basket.classList = 'icon-basket card-price__btn-basket';
+
+        img.src = data.image;
+        img.alt = data.name;
+        img.loading = 'lazy';
+        h4.innerText = data.name;
+        cost.innerHTML += `<span id="cost-sum">${data.cost}</span> USB`;
+        amount.innerText = 1;
+        
+        article.appendChild(img);
+        article.appendChild(div);
+        div.appendChild(h4);
+        div.appendChild(card_price);
+        card_price.appendChild(cost);
+        card_price.appendChild(btn);
+        btn.appendChild(minus);
+        btn.appendChild(amount);
+        btn.appendChild(plus);
+        btn.appendChild(basket);
+        flowerContainer.appendChild(article);
+
+        i += 1;
+        
+        if (i == 8) {
+            return false;
+        } else {
+            return true;
+        }
+    });
+};
+
+const burgerBtn = document.querySelector('#burger-btn');
+const topMenu = document.querySelector('#navbar');
+
+burgerBtn.addEventListener('click', () => {
+    topMenu.classList.toggle('active');
+    burgerBtn.classList.toggle('active');
+});

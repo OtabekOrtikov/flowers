@@ -15,15 +15,18 @@ a {
     text-decoration: none;
     color: inherit;
     transition: all .3s ease-out;
-    &.btn-primary {
-        @extend %primary-btn;
-    }
-    &.btn-outline-primary {
-        @extend %primary-outline-btn;
-    }
-    &.btn-out-primary {
-        @extend %primary-out-btn;
-    }
+}
+.btn-primary {
+    @extend %primary-btn;
+}
+.btn-outline-primary {
+    @extend %primary-outline-btn;
+}
+.btn-out-primary {
+    @extend %primary-out-btn;
+}
+.btn-out-light {
+    @extend %light-out-btn;
 }
 
 @import 'header';
@@ -35,3 +38,5 @@ main {
 }
 
 @import 'footer';
+
+@import 'mobile';

@@ -13,13 +13,11 @@
         }
 
         &__articles {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            gap: 35px;
             margin-bottom: 50px;
-            justify-content: space-between;
 
-            &-card {
+            @include grid-box(repeat(auto-fill, 300px), auto, 35px, space-between, flex-start);
+
+            .flower-card {
                 box-shadow: 0 2px 5px $light-grey;
                 max-width: 300px;
                 background-color: $white;

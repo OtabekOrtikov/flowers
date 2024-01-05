@@ -11,11 +11,22 @@
         <section class="header-top">
             <nav class="header-top__nav">
                 <div class="header-top__nav-logo"><img loading="lazy" src="assets/logo.png" alt="Logo PNG"></div>
-                <ul class="header-top__nav-menu">
+                <div class="header-top__nav-burger" id="burger-btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="header-top__nav-menu" id="navbar">
                     <li class="header-top__nav-menu-item"><a href="#">Shop</a></li>
                     <li class="header-top__nav-menu-item"><a href="#">About Us</a></li>
                     <li class="header-top__nav-menu-item"><a href="#">Contacts</a></li>
-                    <li class="header-top__nav-menu-item"><a href="#" class="btn-outline-primary"><span class="icon-basket"></span>Basket</a></li>
+                    <li class="header-top__nav-menu-item has-submenu">
+                        <span href="#" class="btn-outline-primary">Catalog <span class="icon-right-open"></span></span>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="json/articles.json" target="_blank">Bouquets</a></li>
+                            <li class="submenu-item"><a href="styles/css/main.css" target="_blank">Select own</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </section>
@@ -44,68 +55,10 @@
         <section class="create">
             <div class="create-container">
                 <h2 class="create-container__title">Collect your <span>own</span> Bouquet</h2>
-                <div class="create-container-articles">
-                    <article class="create-container-articles__card">
-                        <img loading="lazy" src="assets/red-rose.jpg" alt="Red Roses">
-                        <div class="create-container-articles__card-desc">
-                            <h4>Red Roses</h4>
-                            <div class="card-price">
-                                <span class="card-price__cost"><span id="cost-sum">121.16</span> USB</span>
-                                <button class="card-price__btn">
-                                    <span class="icon-minus card-price__btn-minus"></span>
-                                    <span class="card-price__btn-amount">1</span>
-                                    <span class="icon-plus card-price__btn-plus"></span>
-                                    <span class="icon-basket card-price__btn-basket"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="create-container-articles__card">
-                        <img loading="lazy" src="assets/white-rose.jpg" alt="Red Roses">
-                        <div class="create-container-articles__card-desc">
-                            <h4>White Roses</h4>
-                            <div class="card-price">
-                                <span class="card-price__cost"><span id="cost-sum">121.16</span> USB</span>
-                                <button class="card-price__btn">
-                                    <span class="icon-minus card-price__btn-minus"></span>
-                                    <span class="card-price__btn-amount">1</span>
-                                    <span class="icon-plus card-price__btn-plus"></span>
-                                    <span class="icon-basket card-price__btn-basket"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="create-container-articles__card">
-                        <img loading="lazy" src="assets/orchid.jpg" alt="Red Roses">
-                        <div class="create-container-articles__card-desc">
-                            <h4>White orchid</h4>
-                            <div class="card-price">
-                                <span class="card-price__cost"><span id="cost-sum">121.16</span> USB</span>
-                                <button class="card-price__btn">
-                                    <span class="icon-minus card-price__btn-minus"></span>
-                                    <span class="card-price__btn-amount">1</span>
-                                    <span class="icon-plus card-price__btn-plus"></span>
-                                    <span class="icon-basket card-price__btn-basket"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="create-container-articles__card">
-                        <img loading="lazy" src="assets/pink-flower.jpg" alt="Red Roses">
-                        <div class="create-container-articles__card-desc">
-                            <h4>Pink flower</h4>
-                            <div class="card-price">
-                                <span class="card-price__cost"><span id="cost-sum">120</span> USB</span>
-                                <button class="card-price__btn">
-                                    <span class="icon-minus card-price__btn-minus"></span>
-                                    <span class="card-price__btn-amount">1</span>
-                                    <span class="icon-plus card-price__btn-plus"></span>
-                                    <span class="icon-basket card-price__btn-basket"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                <div class="create-container-articles"></div>
+                <p class="create-container__btn">
+                    <a href="#" class="btn-out-light">See more</a>
+                </p>
             </div>
         </section>
     </main>
@@ -119,6 +72,13 @@
                     <li class="footer-container__nav-menu-item"><a href="#">Shop</a></li>
                     <li class="footer-container__nav-menu-item"><a href="#">About us</a></li>
                     <li class="footer-container__nav-menu-item"><a href="#">Contacts</a></li>
+                    <li class="footer-container__nav-menu-item has-submenu">
+                        <span>Catalog <span class="icon-right-open"></span></span>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="#">Bouquets</a></li>
+                            <li class="submenu-item"><a href="#">Select own</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <div class="footer-container__nav-map">
                     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9763a0561ab9274ed11801e6291b3f013d9711d9f7b76866a3003e46164206b1&amp;source=constructor" width="320" height="320" frameborder="0"></iframe>

@@ -5,7 +5,7 @@
     border-radius: 8px;
     font-size: 16px;
 
-    &:hover {
+    &:hover, &:focus {
         border-color: $blue;
     }
 }
@@ -61,5 +61,17 @@
     }
     .card-price__btn-basket {
         padding: 10px;
+    }
+}
+%light-out-btn {
+    border: 2px solid $white;
+    color: $white;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-radius: 10px;
+
+    &:hover {
+        color: $lime;
+        border-color: $lime;
     }
 }

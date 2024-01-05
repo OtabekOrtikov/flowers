@@ -5,7 +5,13 @@
     &-container {
         @extend %container;
         &__nav {
-            @include grid-box(300px 300px 320px, auto, auto, space-between, flex-start);
+            gap: 30px 0;
+            @include flex-box(row, space-between, flex-start, wrap);
+
+            &-logo {
+                max-width: 320px;
+                width: 100%;
+            }
 
             &-menu {
                 margin: 0 auto;
@@ -33,10 +39,41 @@
                         }
                     }
                     
+                    &.has-submenu {
+                        cursor: pointer;
+                        position: relative;
+                        span::before {
+                            transition: all .5s ease;
+                            transform: rotate(90deg);
+                        }
+                        &.focused {
+                            span::before {
+                                transform: rotate(-90deg);
+                            }
+                            .submenu {
+                                transform: scaleY(1) translateY(10px);
+                            }
+                        }
 
+                        .submenu {
+                            position: absolute;
+                            right: -130%;
+                            top: -20%;
+                            width: 100%;
+                            height: 0;
+                            z-index: 111;
+                            transform: scaleY(0);
+                            transition: all .3s ease-in;
+                            &-item {
+                                padding: 5px 0 10px;
+                            }
+                        }
+                    }
                 }
             }
             &-map {
+                max-width: 320px;
+                width: 100%;
                 iframe {
                     border: 1px dashed $blue;
                 }
