@@ -8,7 +8,7 @@
         
         &__nav {
             @extend %container;
-            @include flex-box(row, space-between, center, wrap);
+            @include flex-box(row, space-between, center, nowrap);
 
             &-logo img {
                 max-width: 110px;
@@ -69,6 +69,7 @@
         position: relative;
 
         &__main {
+            transition: all .3s ease-in; 
             @extend %container;
 
             &-title {
@@ -90,7 +91,7 @@
             left: 0;
             z-index: -1;
             height: 100%;
-            max-width: 100%;
+            width: 100%;
             overflow: hidden;
             position: absolute;
             img {

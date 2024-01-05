@@ -36,4 +36,30 @@
     margin: auto;
     height: auto;
     width: 100%;
+    padding: 10px;
+}
+%price-btn {
+    outline: none;
+    border: none;
+    background-color: $lime;
+    color: $white;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+
+    @include flex-box(row, flex-end, center, nowrap);
+
+    .card-price__btn-minus, .card-price__btn-amount, .card-price__btn-plus {
+        display: none;
+        margin: 0 2px;
+    }
+    .card-price__btn-minus {
+        margin-right: 5px;
+    }
+    .card-price__btn-plus {
+        margin-left: 5px;
+    }
+    .card-price__btn-basket {
+        padding: 10px;
+    }
 }

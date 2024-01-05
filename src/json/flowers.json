@@ -1,0 +1,10 @@
+{
+    "flowers": [
+        {
+            "id": 1,
+            "name": "Red Roses",
+            "cost": 3,
+            "image": "assets/red-roses.jpg"
+        }
+    ]
+}
