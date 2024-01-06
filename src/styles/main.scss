@@ -42,51 +42,7 @@ main {
 
     @import 'collect';
 
-    .about {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        padding: 20px 0;
-        border-bottom: 1px solid $light-grey;
-        &-container {
-            @extend %container;
-            &__img {
-                max-width: 100%;
-                width: 100%;
-                max-height: 60vh;
-                overflow: hidden;
-                img {
-                    width: 100%;
-                    transform: translateY(-20%)
-                }
-            }
-            &__title {
-                font-size: 40px;
-                font-weight: 500;
-                color: $blue;
-                margin: 24px 0;
-            }
-            &__content {
-                @include grid-box(50% 50%, auto, 35px, space-between, flex-start);
-                &-info {
-                    max-width: 100%;
-                    width: 100%;
-                    overflow: hidden;
-                    p {
-                        font-size: 18px;
-                        font-weight: 400;
-                        color: $blue;
-                        margin-bottom: 10px;
-
-                        img {
-                            width: 100px;
-                            height: auto;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    @import 'about';
 }
 
 @import 'footer';
