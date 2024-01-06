@@ -17,51 +17,54 @@
                     <div></div>
                 </div>
                 <ul class="header-top__nav-menu" id="navbar">
-                    <li class="header-top__nav-menu-item"><a href="shop.html">Shop</a></li>
+                    <li class="header-top__nav-menu-item active-link"><a href="shop.html">Shop</a></li>
                     <li class="header-top__nav-menu-item"><a href="about.html">About Us</a></li>
                     <li class="header-top__nav-menu-item"><a href="contacts.html">Contacts</a></li>
                     <li class="header-top__nav-menu-item has-submenu">
-                        <span href="#" class="btn-outline-primary">Catalog <span class="icon-right-open"></span></span>
+                        <span class="btn-outline-primary">Catalog <span class="icon-right-open"></span></span>
                         <ul class="submenu">
-                            <li class="submenu-item"><a href="shop.html">Bouquets</a></li>
+                            <li class="submenu-item"><a href="json/articles.json">Bouquets</a></li>
                             <li class="submenu-item"><a href="create.html">Select own</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </section>
-        <section class="header-container">
-            <div class="header-container__main">
-                <h1 class="header-container__main-title">Feruza's Flowers</h1>
-                <p class="header-container__main-p">The epitome of delicacy, which will tell you about the most sensitive and <br> important feelings without further ado.</p>
-                <a href="shop.html" class="header-container__main-link btn-primary">Go over <span class="icon-right-open"></span></a>
-            </div>
-            <div class="header-container__bg">
-                <img loading="lazy" src="assets/header-bg-1.jpg" alt="Header background 1" id="slide-item-1">
-                <img loading="lazy" src="assets/header-bg-2.jpg" alt="Header background 2" id="slide-item-2">
-                <img loading="lazy" src="assets/header-bg-3.jpg" alt="Header background 3" id="slide-item-3">
-            </div>
-        </section>
     </header>
 
     <main>
-        <section class="catalog">
-            <div class="catalog-container">
-                <h2 class="catalog-container__title">Main catalog</h2>
-                <div class="catalog-container__articles"></div>
-                <p class="catalog-container__seemore"><a href="shop.html" class="btn-out-primary">See more</a></p>
-            </div>
-        </section>
-        <section class="create">
-            <div class="create-container">
-                <h2 class="create-container__title">Collect your <span>own</span> Bouquet</h2>
-                <div class="create-container-articles"></div>
-                <p class="create-container__btn">
-                    <a href="create.html" class="btn-out-light">See more</a>
-                </p>
+        <section class="shop">
+            <div class="shop-container">
+                <aside class="shop-container__filter">
+                    <div class="shop-filter" id="filter-content">
+                        <h2 class="shop-filter__title" id="filter-btn">
+                            <span class="icon-filter">Filter</span>
+                            <span class="icon-right-open"></span>
+                        </h2>
+                        <div class="shop-filter__category">
+                            <h3 class="shop-filter__category-title">Categories</h3>
+                            <ul class="shop-filter__category-list">
+                                <li class="cat-btn active" id="all">All bouquets</li>
+                                <li class="cat-btn" id="mom">For Mom</li>
+                                <li class="cat-btn" id="children">For children</li>
+                                <li class="cat-btn" id="marry">Bouquets for Marry Me</li>
+                                <li class="cat-btn" id="classic">Classic bouquets</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+                <div class="shop-container__content">
+                    <div class="shop-content__pagination" id="page-cont">
+                        <button id="page" class="active"></button>
+                        <button id="prev-page" onclick="prevPage()">Back</button>
+                        <button id="next-page" onclick="nextPage()">Next</button>
+                    </div>
+                    <div class="shop-content__articles" id="list-cont"></div>
+                </div>
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <div class="footer-container">
             <nav class="footer-container__nav">
@@ -69,7 +72,7 @@
                     <a href="index.html"><img loading="lazy" src="assets/logo.png" alt="Feruza's flowers Logo"></a>
                 </div>
                 <ul class="footer-container__nav-menu">
-                    <li class="footer-container__nav-menu-item"><a href="shop.html">Shop</a></li>
+                    <li class="footer-container__nav-menu-item active-link"><a href="shop.html">Shop</a></li>
                     <li class="footer-container__nav-menu-item"><a href="about.html">About us</a></li>
                     <li class="footer-container__nav-menu-item"><a href="contacts.html">Contacts</a></li>
                     <li class="footer-container__nav-menu-item has-submenu">
@@ -87,8 +90,15 @@
         </div>
     </footer>
 
-    <script src="js/articles.js"></script>
-    <script src="js/slide_show.js"></script>
+    <script>
+        const filterBtn = document.querySelector('#filter-btn');
+        const filterContent = document.querySelector('#filter-content');
+
+        filterBtn.addEventListener('click', () => {
+            filterContent.classList.toggle('focused');
+        });
+    </script>
+    <script src="js/shop.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

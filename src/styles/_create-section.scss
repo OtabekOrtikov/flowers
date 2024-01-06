@@ -24,39 +24,10 @@
             justify-content: space-between;
             gap: 35px;
 
-            .flower-card {
-                overflow: hidden;
-                max-width: 300px;
-                box-shadow: 0 3px 5px $grey;
-                background-color: $white; 
-                border-radius: 10px;
-                img {
-                    max-width: 300px;
-                    width: 100%;
-                    margin-bottom: 0;
-                    box-shadow: 0 0 5px $light-grey;
-                }
-                &-desc {
-                    padding: 18px 20px;
-                    h4 {
-                        font-size: 20px;
-                        font-weight: 700;
-                        color: $blue;
-                        margin-bottom: 20px;
-                    }
-                    .card-price {
-                        @include flex-box(row, space-between, center, nowrap);
+            @include grid-box(repeat(auto-fill, 300px), auto, 35px, space-between, flex-start);
 
-                        &__cost {
-                            font-size: 18px;
-                            font-weight: 600;
-                            color: $blue;
-                        }
-                        &__btn {
-                            @extend %price-btn;
-                        }
-                    }
-                }
+            .flower-card {
+                @extend %flower-card;
             }
         }
 

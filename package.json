@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node-sass src/styles/main.scss src/styles/css/main.css",
+    "prettier": "prettier --write \"src/styles/css/styles.css\"",
+    "lint": "stylelint ./src/styles/*.scss --fix && stylelint ./src/styles/*.scss",
+    "prod": "npm run lint && npm run compile && npm run prettier"
   },
   "author": "Feruza Juraeva",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "stylelint": "^16.1.0"
   }
 }

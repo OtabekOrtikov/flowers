@@ -4,60 +4,168 @@
             "id": "0",
             "name": "Bouquet  002",
             "image": "assets/buket-002.jpg",
+            "category": "mom",
+            "selector": "002",
             "cost": 120
         },
         {
             "id": "1",
             "name": "Bouquet  004",
             "image": "assets/buket-004.jpg",
+            "category": "marry",
+            "selector": "004",
             "cost": 120
         },
         {
             "id": "2",
             "name": "Bouquet  068",
             "image": "assets/buket-068.jpg",
+            "category": "children",
+            "selector": "068",
             "cost": 150
         },
         {
             "id": "3",
             "name": "Bouquet  030",
             "image": "assets/buket-030.jpg",
+            "category": "mom",
+            "selector": "030",
             "cost": 50
         },
         {
             "id": "4",
             "name": "Bouquet  172",
             "image": "assets/buket-172.jpg",
+            "category": "classic",
+            "selector": "172",
             "cost": 60
         },
         {
             "id": "5",
             "name": "Bouquet  226",
             "image": "assets/buket-226.jpg",
+            "category": "classic",
+            "selector": "226",
             "cost": 95
         },
         {
             "id": "6",
             "name": "Bouquet  227",
             "image": "assets/buket-227.jpg",
+            "category": "marry",
+            "selector": "227",
             "cost": 50
         },
         {
             "id": "7",
             "name": "Bouquet  209",
             "image": "assets/buket-209.jpg",
+            "category": "mom",
+            "selector": "209",
             "cost": 90
         },
         {
             "id": "8",
             "name": "Bouquet  060",
             "image": "assets/buket-060.jpg",
+            "category": "marry",
+            "selector": "060",
             "cost": 121.16
         },
         {
             "id": "9",
             "name": "Bouquet  228",
             "image": "assets/buket-228.jpg",
+            "category": "children",
+            "selector": "228",
+            "cost": 121.16
+        },
+        {
+            "id": "10",
+            "name": "Bouquet  002",
+            "image": "assets/buket-002.jpg",
+            "category": "classic",
+            "selector": "002",
+            "cost": 120
+        },
+        {
+            "id": "11",
+            "name": "Bouquet  004",
+            "image": "assets/buket-004.jpg",
+            "category": "children",
+            "selector": "004",
+            "cost": 120
+        },
+        {
+            "id": "12",
+            "name": "Bouquet  068",
+            "image": "assets/buket-068.jpg",
+            "category": "marry",
+            "selector": "068",
+            "cost": 150
+        },
+        {
+            "id": "13",
+            "name": "Bouquet  030",
+            "image": "assets/buket-030.jpg",
+            "category": "mom",
+            "selector": "030",
+            "cost": 50
+        },
+        {
+            "id": "14",
+            "name": "Bouquet  172",
+            "image": "assets/buket-172.jpg",
+            "category": "classic",
+            "selector": "172",
+            "cost": 60
+        },
+        {
+            "id": "15",
+            "name": "Bouquet  226",
+            "image": "assets/buket-226.jpg",
+            "category": "mom",
+            "selector": "226",
+            "cost": 95
+        },
+        {
+            "id": "16",
+            "name": "Bouquet  227",
+            "image": "assets/buket-227.jpg",
+            "category": "children",
+            "selector": "227",
+            "cost": 50
+        },
+        {
+            "id": "17",
+            "name": "Bouquet  209",
+            "image": "assets/buket-209.jpg",
+            "category": "classic",
+            "selector": "209",
+            "cost": 90
+        },
+        {
+            "id": "18",
+            "name": "Bouquet  060",
+            "image": "assets/buket-060.jpg",
+            "category": "marry",
+            "selector": "060",
+            "cost": 121.16
+        },
+        {
+            "id": "19",
+            "name": "Bouquet  060",
+            "image": "assets/buket-060.jpg",
+            "category": "marry",
+            "selector": "060",
+            "cost": 121.16
+        },
+        {
+            "id": "20",
+            "name": "Bouquet  060",
+            "image": "assets/buket-060.jpg",
+            "category": "marry",
+            "selector": "060",
             "cost": 121.16
         }
     ],
@@ -66,24 +174,28 @@
             "id": 0,
             "name": "Red Roses",
             "cost": 3,
+            "category": "red",
             "image": "assets/red-rose.jpg"
         },
         {
             "id": 1,
             "name": "White Roses",
             "cost": 3,
+            "category": "white",
             "image": "assets/white-rose.jpg"
         },
         {
             "id": 2,
             "name": "White orchid",
             "cost": 5,
+            "category": "white",
             "image": "assets/orchid.jpg"
         },
         {
             "id": 3,
             "name": "Pink flowers",
             "cost": 2.5,
+            "category": "pink",
             "image": "assets/pink-flower.jpg"
         }
     ]

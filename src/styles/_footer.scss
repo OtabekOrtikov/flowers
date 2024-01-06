@@ -38,6 +38,13 @@
                             width: 100%;
                         }
                     }
+                    &.active-link {
+                        a {
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+                    }
                     
                     &.has-submenu {
                         cursor: pointer;
