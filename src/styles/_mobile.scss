@@ -110,16 +110,6 @@
                     &.active {
                         left: 0;
                         transition: all .5s ease-in;
-                        // &::before {
-                        //     content: '';content
-                        //     width: 100%;width
-                        //     height: 100%;height
-                        //     background-color: rgba($color: $grey, $alpha: 0.5);background-color
-                        //     position: absolute;position
-                        //     z-index: -1;z-index
-                        //     top: 0;top
-                        //     right: -100%;right
-                        // }
                     }
                 }
             }
