@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/main.css">
+    <title>About Feruza's flowers</title>
+</head>
+<body>
+    <header class="header">
+        <section class="header-top">
+            <nav class="header-top__nav">
+                <div class="header-top__nav-logo"><a href="index.html"><img loading="lazy" src="assets/logo.png" alt="Logo PNG"></a></div>
+                <div class="header-top__nav-burger" id="burger-btn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="header-top__nav-menu" id="navbar">
+                    <li class="header-top__nav-menu-item"><a href="shop.html">Shop</a></li>
+                    <li class="header-top__nav-menu-item active-link"><a href="about.html">About Us</a></li>
+                    <li class="header-top__nav-menu-item"><a href="contacts/">Contacts</a></li>
+                    <li class="header-top__nav-menu-item has-submenu">
+                        <span href="#" class="btn-outline-primary">Catalog <span class="icon-right-open"></span></span>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="shop.html">Bouquets</a></li>
+                            <li class="submenu-item"><a href="create.html">Select own</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="about">
+            <div class="about-container">
+                <div class="about-container__img">
+                    <img src="assets/ff-group.jpg" alt="Our group photo">
+                </div>
+                <h1 class="about-container__title">Feruza's flowers</h1>
+                <div class="about-container__content">
+                    <div class="about-container__content-info">
+                        <p>
+                            Flowers are the language of love and we know how to speak it.<br>Our floral creations are small works of art, the main value of which is professionalism, uniqueness and emotions.<br>Feruza's flowers offers a wide selection of flowers, compositions, indoor plants and souvenirs, as well as high-class service with an individual approach to each client, which has always pleased our customers for 50 years.
+                        </p>
+                        <p>Each of our florists is a professional in their field, sincerely loving flowers and people. The sensitivity of our employees in the process of choosing colors, the speed of assembly and delivery, expert recommendations on care-all this creates the atmosphere and quality that we are proud of.</p>
+                    </div>
+                    <div class="about-container__content-info">
+                        <p><img src="https://tgfiles.oxapp.io/cache/original/image/9d/28/88/9d2888156eeaf674f041320c6428c5eb27c2167ff78ebc0894b5475cfc1837db.jpg?w=128&q=75" alt="50 Year"></p>
+                        <p>50 years on the market</p>
+                        <p>Our experience is your trust. For half a century of work, we have won the hearts of more than 100,000 customers, providing them with unsurpassed flower arrangements and decorative elements. Our flowers have become part of special moments in each of your lives, and we are proud of this rich heritage.</p>
+                    </div>
+                    <div class="about-container__content-info">
+                        <p><img src="https://tgfiles.oxapp.io/cache/original/image/9f/75/33/9f753322e06be67b2ebc6959398877e5a00c0b10238c43040e6044de91a43a2e.png?w=128&q=75" alt="5 years of floristy school"></p>
+                        <p>5 years of floristry school</p>
+                        <p>Our floral school has been teaching and inspiring future masters of floral art for 5 years. We pass on our experience and passion for flowers to new generations, helping them discover their creative potential and become professionals in the world of floristry. Together, we create a flourishing future."</p>
+                    </div>
+                    <div class="about-container__content-info">
+                        <p><img src="https://tgfiles.oxapp.io/cache/original/image/94/75/29/9475291c2c17869d6dda0dc7f8a5f38650e5149be403fe772652945a62b06e4b.png?w=128&q=75" alt="More than 100.000"></p>
+                        <p>More than 100,000 in the customer base</p>
+                        <p>We thank each of our clients for their many years of trust and support. We are happy to make our customers happy by bringing them beauty and joy in every bouquet and arrangement. Your smile is our main reward.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="footer-container__nav">
+                <div class="footer-container__nav-logo">
+                    <a href="index.html"><img loading="lazy" src="assets/logo.png" alt="Feruza's flowers Logo"></a>
+                </div>
+                <ul class="footer-container__nav-menu">
+                    <li class="footer-container__nav-menu-item"><a href="shop.html">Shop</a></li>
+                    <li class="footer-container__nav-menu-item active-link"><a href="about.html">About us</a></li>
+                    <li class="footer-container__nav-menu-item"><a href="contacts/">Contacts</a></li>
+                    <li class="footer-container__nav-menu-item has-submenu">
+                        <span>Catalog <span class="icon-right-open"></span></span>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="shop.html">Bouquets</a></li>
+                            <li class="submenu-item"><a href="create.html">Select own</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="footer-container__nav-map">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9763a0561ab9274ed11801e6291b3f013d9711d9f7b76866a3003e46164206b1&amp;source=constructor" width="320" height="320" frameborder="0"></iframe>
+                </div>
+            </nav>
+        </div>
+    </footer>
+    
+    <script>
+        const map = document.querySelector('#map');
+        const content = document.querySelector('#content');
+
+        if (window.screen.width > 468) {
+            map.addEventListener('mouseover', () => {
+                content.style.opacity = 0.3;
+            });
+            map.addEventListener('mouseout', () => {
+                content.style.opacity = 1;
+            });
+        } else {
+            map.addEventListener('mouseover', () => {
+                content.style.opacity = 1;
+            });
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
