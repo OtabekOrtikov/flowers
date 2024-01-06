@@ -88,24 +88,6 @@
             </nav>
         </div>
     </footer>
-    
-    <script>
-        const map = document.querySelector('#map');
-        const content = document.querySelector('#content');
-
-        if (window.screen.width > 468) {
-            map.addEventListener('mouseover', () => {
-                content.style.opacity = 0.3;
-            });
-            map.addEventListener('mouseout', () => {
-                content.style.opacity = 1;
-            });
-        } else {
-            map.addEventListener('mouseover', () => {
-                content.style.opacity = 1;
-            });
-        }
-    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
